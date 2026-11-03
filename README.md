@@ -6,7 +6,8 @@ Program Python berbasis menu untuk menjelajahi data tweet dan sentimennya.
 - **Nama:** Twitter Entity Sentiment Analysis (file yang dipakai: `twitter_validation.csv`)
 - **Tautan Kaggle:** https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 - **Lisensi:** CC0: Public Domain
-- **Alasan memilih:** Memenuhi requirements dari tugas dan simple
+- **Alasan memilih:**  Data ini adalah tweet nyata sehingga hasilnya terasa bermakna. Ukurannya (1.000 baris) pas dengan syarat 200 sampai 2.000 baris tanpa perlu dipangkas. Kolomnya sederhana dan lengkap, dengan dua kolom kategori (entitas dan sentimen) yang cocok untuk fitur pencarian, filter, ranking, dan ringkasan. Teksnya yang berantakan (huruf kapital campur, tanda hubung, baris baru) juga membuat fungsi pembersih teks benar-benar berguna.
+
 - **Ukuran:** 1.000 baris, satu file CSV, satu baris = satu tweet, tanpa baris header.
 
 ### Kolom
@@ -26,7 +27,7 @@ Hanya butuh Python 3 (pustaka standar saja).
     python main.py                 # menjalankan program
     python -m unittest             # menjalankan unit test (23 tes)
 
-Jalankan dari dalam folder ini. File `twitter_validation.csv` harus berada di samping `main.py`.
+Jalankan dari dalam folder ini. File `twitter_validation.csv` harus berada didalam folder yang sama bersama `main.py`.
 
 ## 3. Fitur
 1. **Cari kata kunci** – tidak peduli huruf kapital, tanda hubung, aksen, atau spasi berlebih.
@@ -46,14 +47,14 @@ Setiap input diperiksa; input salah menghasilkan pesan dan prompt baru, bukan cr
 5. Setiap pilihan menu memanggil fungsi di `analysis.py` (cari, filter, urutkan, ringkas). Hasilnya berupa list baru, lalu `main.py` mencetaknya dalam tabel rata dengan f-string.
 6. `test_project.py` menguji fungsi-fungsi tersebut dengan data kecil: input normal, kasus tepi (list kosong, nol), dan input salah.
 
-## 5. Keterbatasan
+## 5. Keterbatasan yang disadari
 - Label sentimen berasal dari dataset dan belum tentu sesuai penilaian manusia.
 - Teks tweet dipotong 55 karakter di tabel.
 - Kolom angka asli hanya ID, sehingga analisis memakai nilai turunan (panjang tweet, persentase) dan relatif sederhana.
 - Nama entitas dipakai apa adanya dari dataset (misalnya `WorldOfCraft`).
 
 ## 6. Tautan video
-TODO – tempel tautan YouTube (Unlisted atau Public, bukan Private).
+https://youtu.be/ZFn0IKo5vPU
 
 ## 7. Letak setiap konsep
 | Konsep | File | Fungsi / bagian |
@@ -67,4 +68,4 @@ TODO – tempel tautan YouTube (Unlisted atau Public, bukan Private).
 | List (simpan, buat list baru, slicing) | `analysis.py` | `filter_tweets` membuat list; `top_longest` memakai `ranked[:n]` |
 | Manipulasi string | `text_utils.py` | `clean_text`, `mask_handles`, `shorten` |
 | Class (bonus) | `models.py` | `Tweet` (`__init__`, `__str__`), `TweetCollection` |
-| Unit test | `test_project.py` | 23 tes: input normal, tepi, dan salah |
+| Unit test | `test_project.py` | 23 tes |
