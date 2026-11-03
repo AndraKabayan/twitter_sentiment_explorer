@@ -84,7 +84,7 @@ Setiap input diperiksa; input salah menghasilkan pesan dan prompt baru, bukan cr
 - Tampilan terminal, kode komentar, dan README memakai bahasa Indonesia. Nilai sentimen di data tetap Inggris (Positive, Negative, Neutral, Irrelevant); program menerima ketikan Inggris maupun Indonesia (positif, negatif, netral, tidak relevan).
 
 ## 6. Tautan video
-TODO – tempel tautan YouTube (Unlisted atau Public, bukan Private).
+https://youtu.be/ZFn0IKo5vPU
 
 ## 7. Letak setiap konsep
 | Konsep | File | Fungsi / bagian |
